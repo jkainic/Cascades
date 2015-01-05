@@ -36,6 +36,5 @@ Next, draw your population and set initial adoption density values. Create an is
 
 Note on using the program: the display window will only show density values up to one decimal point, but the density values up to 4 decimal points are printed in terminal.
 
-AREAS FOR IMPROVEMENT
 Note on the code itself: you may notice functions "update info" and "beta crit" that appear to be doing nothing since "update info" simply returns “True” and "beta crit" is never called. The intended purpose of "beta crit" is to calculate stable population densities. The function as it is currently written does this, except that there is currently a problem with solving polynomial systems in sympy. Namely, sympy does not recognize floating point zeros, and as a result will often not be able to solve polynomial systems with coefficients as floating points. One possible solution is to use the flag ‘domain = ‘QQ’ ‘ to set all coefficients and solutions to rational numbers, but testing this solution did not terminate. I have included as comments calls that should be made in order to run beta_crit and display this information in a text box. This way, if this problem is fixed, the user can remove these comments and make the associated calls in their place. It is possible that an alternative solution would be to pipe to a function in MatLab or Mathematica.
 
